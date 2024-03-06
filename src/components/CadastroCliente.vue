@@ -1,21 +1,28 @@
 <template>
   <div>
     <h2>{{ modoEdicao ? 'Editar Cliente' : 'Cadastro de Cliente' }}</h2>
-    <form @submit.prevent="modoEdicao ? atualizarCliente() : cadastrarCliente()">
-      <input type="text" v-model="novoCliente.nome" placeholder="Nome" required>
-      <input type="text" v-model="novoCliente.documento" placeholder="Documento" required>
-      <input type="text" v-model="novoCliente.telefone" placeholder="Telefone" required>
-      <input type="email" v-model="novoCliente.email" placeholder="E-mail" required>
-      <button type="submit">{{ modoEdicao ? 'Atualizar Cliente' : 'Cadastrar Cliente' }}</button>
+    <form @submit.prevent="modoEdicao ? atualizarCliente() : cadastrarCliente()" class="form-style">
+      <input type="text" v-model="novoCliente.nome" placeholder="Nome" required class="imput-class">
+      <input type="text" v-model="novoCliente.documento" placeholder="Documento" required class="imput-class">
+      <input type="text" v-model="novoCliente.telefone" placeholder="Telefone" required class="imput-class">
+      <input type="email" v-model="novoCliente.email" placeholder="E-mail" required class="imput-class">
+      <button type="submit" class="btn btn-success">{{ modoEdicao ? 'Atualizar Cliente' : 'Cadastrar Cliente'
+        }}</button>
     </form>
 
-    <h3>Clientes Cadastrados</h3>
-    <ul>
-      <li v-for="(cliente, index) in clientes" :key="index">
-        {{ cliente.nome }} - {{ cliente.documento }}
-        <button @click="editarCliente(index)">Editar</button>
-      </li>
-    </ul>
+
+    <div class="container">
+      <div class="card">
+        <h3 class="card-header">Clientes Cadastrados</h3>
+        <ul class="list-group list-group-flush">
+          <li v-for="(cliente, index) in clientes" :key="index" class="list-group-item ">
+            {{ cliente.nome }} - {{ cliente.documento }}
+            <button @click="editarCliente(index)" class="btn btn-secondary">Editar</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -52,3 +59,17 @@ export default {
   }
 }
 </script>
+
+<style>
+  .form-style{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    align-items: center;
+  }
+
+  .imput-class{
+    width: 80%;
+    margin: 10px;
+  }
+</style>

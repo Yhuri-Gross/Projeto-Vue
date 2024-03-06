@@ -1,11 +1,12 @@
 <template>
-    <nav>
-      <ul>
-        <li><router-link to="/cadastro-cliente">Cadastro de Cliente</router-link></li>
-        <li><router-link to="/cadastro-produto">Cadastro de Produto</router-link></li>
-        <li><router-link to="/associacao-produto-cliente">Associação de Produto ao Cliente</router-link></li>
+    <nav class="nav justify-content-center ">
+      <ul  class="nav nav-pills nav-fill">
+        <li class="nav-item"><router-link to="/cadastro-cliente" class="nav-link active">Cadastro de Cliente</router-link></li>
+        <li class="nav-item"><router-link to="/cadastro-produto" class="nav-link active">Cadastro de Produto</router-link></li>
+        <li class="nav-item"><router-link to="/associacao-produto-cliente" class="nav-link active">Associação de Produto ao Cliente</router-link></li>
       </ul>
     </nav>
+    <hr>
   </template>
   
   <script>
@@ -15,16 +16,6 @@
   </script>
   
   <style scoped>
-  nav {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
   
   li {
     display: inline;
