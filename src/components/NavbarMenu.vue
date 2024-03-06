@@ -20,6 +20,7 @@
   li {
     display: inline;
     margin-right: 10px;
+    margin-bottom: 10px;
   }
   
   a {

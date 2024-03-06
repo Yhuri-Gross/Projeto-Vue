@@ -2,10 +2,14 @@
   <div>
     <h2>{{ modoEdicao ? 'Editar Cliente' : 'Cadastro de Cliente' }}</h2>
     <form @submit.prevent="modoEdicao ? atualizarCliente() : cadastrarCliente()" class="form-style">
-      <input type="text" v-model="novoCliente.nome" placeholder="Nome" required class="imput-class">
-      <input type="text" v-model="novoCliente.documento" placeholder="Documento" required class="imput-class">
-      <input type="text" v-model="novoCliente.telefone" placeholder="Telefone" required class="imput-class">
-      <input type="email" v-model="novoCliente.email" placeholder="E-mail" required class="imput-class">
+      <label for="nome">Nome:</label>
+      <input id="nome" type="text" v-model="novoCliente.nome" placeholder="Nome" required class="imput-class">
+      <label for="documento">Documento:</label>
+      <input id="documento" type="number" v-model="novoCliente.documento" placeholder="Documento" required class="imput-class">
+      <label for="nome">Telefone:</label>
+      <input id="telefone" type="number" v-model="novoCliente.telefone" placeholder="Telefone" required class="imput-class">
+      <label for="email">E-mail:</label>
+      <input id="email" type="email" v-model="novoCliente.email" placeholder="E-mail" required class="imput-class">
       <button type="submit" class="btn btn-success">{{ modoEdicao ? 'Atualizar Cliente' : 'Cadastrar Cliente'
         }}</button>
     </form>
@@ -17,7 +21,7 @@
         <ul class="list-group list-group-flush">
           <li v-for="(cliente, index) in clientes" :key="index" class="list-group-item ">
             {{ cliente.nome }} - {{ cliente.documento }}
-            <button @click="editarCliente(index)" class="btn btn-secondary">Editar</button>
+            <button @click="editarCliente(index)" class="btn btn-secondary ml-15px">Editar</button>
           </li>
         </ul>
       </div>
@@ -69,7 +73,12 @@ export default {
   }
 
   .imput-class{
-    width: 80%;
     margin: 10px;
+    border-radius: 5px;
+    height: 35px;
+  }
+
+  .ml-15px{
+    margin-left: 15px;
   }
 </style>

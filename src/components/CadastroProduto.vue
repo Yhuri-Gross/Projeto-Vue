@@ -18,7 +18,7 @@
         <ul class="list-group list-group-flush">
           <li v-for="(produto, index) in produtos" :key="produto.nome" class="list-group-item ">
             {{ produto.nome }} - {{ produto.ativo ? 'Ativo' : 'Inativo' }}
-            <button @click="editarProduto(index)" class="btn btn-secondary">Editar</button>
+            <button @click="editarProduto(index)" class="btn btn-secondary ml-15px">Editar</button>
           </li>
         </ul>
       </div>
@@ -65,7 +65,6 @@ export default {
 
 <style>
   .container{
-    width: 80%;
     margin-top: 30px;
   }
 
@@ -77,7 +76,12 @@ export default {
   }
 
   .imput-class{
-    width: 80%;
     margin: 10px;
+    border-radius: 5px;
+    height: 35px;
   }
+  .ml-15px{
+    margin-left: 15px;
+  }
+
 </style>
