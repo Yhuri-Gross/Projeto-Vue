@@ -1,14 +1,18 @@
 <template>
   <CadastroCliente/>
+  <CadastroProduto/>
 </template>
 
 <script>
 import CadastroCliente from './components/CadastroCliente.vue'
+import CadastroProduto from './components/CadastroProduto.vue'
+
 
 export default {
   name: 'App',
   components: {
-    CadastroCliente
+    CadastroCliente,
+    CadastroProduto,
   }
 }
 </script>
