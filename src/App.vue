@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <CadastroCliente/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CadastroCliente from './components/CadastroCliente.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    CadastroCliente
   }
 }
 </script>
