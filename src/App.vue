@@ -1,24 +1,15 @@
 <template>
   <NavbarMenu/>
-  <AssociacaoProdutoCliente/>
-  <CadastroCliente/>
-  <CadastroProduto/>
+  <router-view />
 </template>
 
 <script>
-import CadastroCliente from './components/CadastroCliente.vue';
-import CadastroProduto from './components/CadastroProduto.vue';
-import AssociacaoProdutoCliente from './components/AssociacaoProdutoCliente';
 import NavbarMenu from './components/NavbarMenu';
-
 
 
 export default {
   name: 'App',
   components: {
-    CadastroCliente,
-    CadastroProduto,
-    AssociacaoProdutoCliente,
     NavbarMenu
   }
 }
