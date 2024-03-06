@@ -1,11 +1,13 @@
 <template>
+  <AssociacaoProdutoCliente/>
   <CadastroCliente/>
   <CadastroProduto/>
 </template>
 
 <script>
-import CadastroCliente from './components/CadastroCliente.vue'
-import CadastroProduto from './components/CadastroProduto.vue'
+import CadastroCliente from './components/CadastroCliente.vue';
+import CadastroProduto from './components/CadastroProduto.vue';
+import AssociacaoProdutoCliente from './components/AssociacaoProdutoCliente'
 
 
 export default {
@@ -13,6 +15,7 @@ export default {
   components: {
     CadastroCliente,
     CadastroProduto,
+    AssociacaoProdutoCliente,
   }
 }
 </script>
