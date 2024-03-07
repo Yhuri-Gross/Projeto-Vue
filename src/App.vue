@@ -1,16 +1,19 @@
 <template>
   <NavbarMenu/>
   <router-view />
+  <AppFooter />
 </template>
 
 <script>
 import NavbarMenu from './components/NavbarMenu';
+import AppFooter from './components/AppFooter';
 
 
 export default {
   name: 'App',
   components: {
-    NavbarMenu
+    NavbarMenu,
+    AppFooter
   }
 }
 </script>

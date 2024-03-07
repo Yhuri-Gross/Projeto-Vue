@@ -1,5 +1,5 @@
 <template>
-    <nav class="nav justify-content-center ">
+    <nav class="nav justify-content-center mt-20px">
       <ul  class="nav nav-pills nav-fill">
         <li class="nav-item"><router-link to="/cadastro-cliente" class="nav-link active">Cadastro de Cliente</router-link></li>
         <li class="nav-item"><router-link to="/cadastro-produto" class="nav-link active">Cadastro de Produto</router-link></li>
@@ -26,6 +26,10 @@
   a {
     color: white;
     text-decoration: none;
+  }
+
+  .mt-20px{
+    margin-top: 20px;
   }
   </style>
   
